@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Localize Gas Monitor</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- <link rel="icon" href="technologo.jpg"> -->
+  <style>
+    nav {
+      background-color: black;
+      width: 100vw;
+      height: 10vh;
+      justify-content: space-between;
+    }
+
+    #toggle ,#toggle2 ,#toggle3 {
+      color: rgb(0, 0, 0);
+      background-color: aqua;
+      border-radius: 7px;
+      border: 5px solid black;
+      width: 180px;
+      height: 50px;
+      font-weight: bolder;
+      margin-right: 7cm;
+      margin-top: 15px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    // FUNCTION SHOW#1 START
+    function show1() {
+      var myDiv = document.getElementsByClassName("parent_container");
+      var toggleButton = document.getElementById("toggle");
+      Array.from(myDiv).forEach((x) => {
+        if (x.style.display === "none") {
+          // Show the div
+          x.style.display = "grid";
+          toggleButton.textContent = "hide Location 1";
+          toggleButton.style.color = "white";
+          toggleButton.style.backgroundColor = "red";
+
+
+        } else {
+          // Hide the div
+          x.style.display = "none";
+          toggleButton.textContent = "show Location 1";
+          toggleButton.style.color = "black";
+          toggleButton.style.backgroundColor = "aqua";
+        }
+      })
+
+    }
+    // FUNCTION SHOW#1 END
+
+    // FUNCTION SHOW#2 START
+    function show2() {
+      var myDiv = document.getElementsByClassName("parent_container2");
+      var toggleButton = document.getElementById("toggle2");
+      Array.from(myDiv).forEach((x) => {
+        if (x.style.display === "none") {
+          // Show the div
+          x.style.display = "grid";
+          toggleButton.textContent = "hide Location 2";
+          toggleButton.style.color = "white";
+          toggleButton.style.backgroundColor = "red";
+
+
+        } else {
+          // Hide the div
+          x.style.display = "none";
+          toggleButton.textContent = "show Location 2";
+          toggleButton.style.color = "black";
+          toggleButton.style.backgroundColor = "aqua";
+        }
+      })
+
+    }
+     // FUNCTION SHOW#2 END
+
+     // FUNCTION SHOW#3 START
+    function show3() {
+      var myDiv = document.getElementsByClassName("parent_container3");
+      var toggleButton = document.getElementById("toggle3");
+      Array.from(myDiv).forEach((x) => {
+        if (x.style.display === "none") {
+          // Show the div
+          x.style.display = "grid";
+          toggleButton.textContent = "Hide Default Location";
+          toggleButton.style.color = "white";
+          toggleButton.style.backgroundColor = "red";
+
+
+        } else {
+          // Hide the div
+          x.style.display = "none";
+          toggleButton.textContent = "show Default Location ";
+          toggleButton.style.color = "black";
+          toggleButton.style.backgroundColor = "aqua";
+        }
+      })
+
+    }
+     // FUNCTION SHOW#3 END
+  </script>
+
+  <nav class="buttonbar" style="display:inline-block">
+    <button id="toggle" onclick="show1()">
+      show Location 1
+    </button>
+    <button id="toggle2" onclick="show2()">
+      show Location 2
+    </button>
+    <button id="toggle3" onclick="show3()">
+      Show Default Location
+    </button>
+  
+  </nav>
+  <br>
+  <br>
+
+  <div class="parent_container">
+
+    <div class="container">
+
+      <!-- <h1>Location 1</h1> -->
+      <h2>22.5781984389, 88.4757596254</h2>
+      <hr />
+      <p>
+      <div class="data">
+        <span>Temperature : </span><span id="L1_ temp_avg"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Humidity : </span><span id="L1_hum_avg"></span><span style="margin-left:5px">%</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Heat Index : </span><span id="L1_heatI_avg"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>PM 2.5 : </span><span id="L1_ PM_avg"></span><span style="margin-left:5px">ug/m3</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Methane : </span><span id="L1_MQ4_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbonmonoxide : </span><span id="L1_ MQ7_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Flammable gas : </span><span id="L1_ MQ9_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbondioxide : </span><span id="L1_ MQ135_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+    </div>
+    
+
+
+    <div class="map_box">
+      <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=techno%20international%20new%20town+(Location%201)&amp;t=h&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        <a href="https://www.maps.ie/population/"> Population mapping </a>
+      </iframe>
+    </div>
+  </div>
+
+
+
+  <!-- LOCATION #2  HTML START-->
+  <div class="parent_container2" style="display: none;">
+    
+    <div class="location2">
+      <h2>22°45'47.5"N 88°31'58.1"E</h2>
+      <hr />
+      <p>
+      <div class="data">
+        <span>Temperature : </span><span id="L2_ temp_avg"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Humidity : </span><span id="L2_hum_avg"></span><span style="margin-left:5px">%</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Heat Index : </span><span id="L2_heatI_avg"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>PM 2.5 : </span><span id="L2_ PM_avg"></span><span style="margin-left:5px">ug/m3</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Methane : </span><span id="L2_MQ4_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbonmonoxide : </span><span id="L2_ MQ7_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Flammable gas : </span><span id="L2_ MQ9_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbondioxide : </span><span id="L2_ MQ135_avg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+    </div>
+    <div class="map_box">
+      <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Narshipur,%20Chandrapur,%20West%20Bengal%20743248+(Location%202)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        <a href="https://www.maps.ie/population/"> Population mapping </a>
+      </iframe>
+    </div>
+    
+  </div>
+  <!-- LOCATION #2 HTML END -->
+
+  
+   <!-- DEFAULT LOCATION   HTML START-->
+   <div class="parent_container3" >
+    
+    <div class="default_location">
+      <h2>Default Location</h2>
+      <hr />
+      <p>
+      <div class="data">
+        <span>Temperature : </span><span id="temp"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Humidity : </span><span id="humid"></span><span style="margin-left:5px">%</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Heat Index : </span><span id="heatI"></span><span style="margin-left:5px">°C</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>PM 2.5 : </span><span id="pm"></span><span style="margin-left:5px">ug/m3</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Methane : </span><span id="meth"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbonmonoxide : </span><span id="co"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Flammable gas : </span><span id="fg"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+      <p>
+      <div class="data">
+        <span>Carbondioxide : </span><span id="co2"></span><span style="margin-left:5px">ppm</span>
+      </div>
+      </p>
+    </div>
+    <div class="map_box">
+      <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=kolkata+(Location%202)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population calculator map</a></iframe></div>
+    </div>
+    
+  </div>
+  <!-- DEFAULT LOCATION  HTML END -->
+  
+</body>
+
+<!-- DATA CONTROL SCRIPT START-->
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script type="module" >
+
+ // Import the functions you need from the SDKs you need
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+      // Your web app's Firebase configuration here (Do not use the existing configuration)
+      const firebaseConfig = {
+        apiKey: "AIzaSyBZt5PhfSamb2cDjyayhoa05w0VZdNZvlQ",
+        authDomain: "aqidatabase.firebaseapp.com",
+        databaseURL:
+          "https://aqidatabase-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "aqidatabase",
+        storageBucket: "aqidatabase.appspot.com",
+        messagingSenderId: "708628159834",
+        appId: "1:708628159834:web:075f4dfe45e332266ea763",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // getting reference to the database
+      var database = firebase.database();
+
+      //getting reference to the data we want
+      var dataRef1 = database.ref("/Location 1/HeatI_avg");
+      var dataRef2 = database.ref("/Location 1/Hum_avg");
+      var dataRef3 = database.ref("/Location 1/MQ4_avg");
+      var dataRef4 = database.ref("/Location 1/MQ135_avg");
+      var dataRef5 = database.ref("/Location 1/MQ7_avg");
+      var dataRef6 = database.ref("/Location 1/MQ9_avg");
+      var dataRef7 = database.ref("/Location 1/PM_avg");
+      var dataRef8 = database.ref("/Location 1/Temp_avg");
+
+      var dataRef9 = database.ref("/Location 2/HeatI_avg");
+      var dataRef10 = database.ref("/Location 2/Hum_avg");
+      var dataRef11 = database.ref("/Location 2/MQ4_avg");
+      var dataRef12 = database.ref("/Location 2/MQ135_avg");
+      var dataRef13 = database.ref("/Location 2/MQ7_avg");
+      var dataRef14 = database.ref("/Location 2/MQ9_avg");
+      var dataRef15 = database.ref("/Location 2/PM_avg");
+      var dataRef16 = database.ref("/Location 2/Temp_avg");
+      //fetch the data
+      dataRef1.on("value", function (getdata1) {
+        var data1 = getdata1.val();
+        document.getElementById("L1_heatI_avg").innerHTML = data1;
+      });
+
+      dataRef2.on("value", function (getdata2) {
+        var data2 = getdata2.val();
+        document.getElementById("L1_hum_avg").innerHTML = data2;
+      });
+
+      dataRef3.on("value", function (getdata3) {
+        var data3 = getdata3.val();
+        document.getElementById("L1_MQ4_avg").innerHTML = data3;
+      });
+
+      dataRef4.on("value", function (getdata4) {
+        var data4 = getdata4.val();
+        document.getElementById("L1_ MQ135_avg").innerHTML = data4;
+      });
+
+      dataRef5.on("value", function (getdata5) {
+        var data5 = getdata5.val();
+        document.getElementById("L1_ MQ7_avg").innerHTML = data5;
+      });
+
+      dataRef6.on("value", function (getdata6) {
+        var data6 = getdata6.val();
+        document.getElementById("L1_ MQ9_avg").innerHTML = data6;
+      });
+
+      dataRef7.on("value", function (getdata7) {
+        var data7 = getdata7.val();
+        document.getElementById("L1_ PM_avg").innerHTML = data7;
+      });
+
+      dataRef8.on("value", function (getdata8) {
+        var data8 = getdata8.val();
+        document.getElementById("L1_ temp_avg").innerHTML = data8;
+      });
+
+      // FOR LOCATION 2 START HERE
+      dataRef9.on("value", function (getdata9) {
+        var data9 = getdata9.val();
+        document.getElementById("L2_heatI_avg").innerHTML = data9;
+      });
+
+      dataRef10.on("value", function (getdata10) {
+        var data10 = getdata10.val();
+        document.getElementById("L2_hum_avg").innerHTML = data10;
+      });
+
+      dataRef11.on("value", function (getdata11) {
+        var data11 = getdata11.val();
+        document.getElementById("L2_MQ4_avg").innerHTML = data11;
+      });
+
+      dataRef12.on("value", function (getdata12) {
+        var data12 = getdata12.val();
+        document.getElementById("L2_ MQ135_avg").innerHTML = data12;
+      });
+
+      dataRef13.on("value", function (getdata13) {
+        var data13 = getdata13.val();
+        document.getElementById("L2_ MQ7_avg").innerHTML = data13;
+      });
+
+      dataRef14.on("value", function (getdata14) {
+        var data14 = getdata14.val();
+        document.getElementById("L2_ MQ9_avg").innerHTML = data14;
+      });
+
+      dataRef15.on("value", function (getdata15) {
+        var data15 = getdata15.val();
+        document.getElementById("L2_ PM_avg").innerHTML = data15;
+      });
+
+      dataRef16.on("value", function (getdata16) {
+        var data16 = getdata16.val();
+        document.getElementById("L2_ temp_avg").innerHTML = data16;
+      });
+</script>
+
+</html>
